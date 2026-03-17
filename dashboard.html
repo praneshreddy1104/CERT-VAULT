@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CertVault - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+
+  <header class="header">
+    <div class="logo"><i class="fas fa-certificate"></i> CertVault</div>
+    <div>
+      <a href="#" class="nav-btn" onclick="showAbout()">About</a>
+      <a href="index.html" class="nav-btn">Logout</a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <h1>Welcome Back, <span id="userName">User</span>!</h1>
+
+    <!-- Big Upload Button – separate page ki -->
+    <div class="upload-hero">
+      <h2>Ready to Add a New Certificate?</h2>
+      <button class="btn big-upload-btn" onclick="window.location.href='upload.html'">Upload Certificate</button>
+      <p>Click here to upload your latest course, internship or achievement cert!</p>
+    </div>
+
+    <!-- Certificates List -->
+    <div class="certs-section" id="certList">
+      <h2>Your Certificates</h2>
+      <div id="certItems"></div> <!-- Dynamic list -->
+    </div>
+
+    <!-- View All Button (scroll smooth) -->
+    <button class="btn view-btn" onclick="document.getElementById('certList').scrollIntoView({behavior: 'smooth'})">View All Certificates</button>
+  </div>
+
+  <footer class="footer">© 2026 CertVault • Made with ❤️ in Andhra Pradesh</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

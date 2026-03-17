@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CertVault - Upload Certificate</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+
+  <header class="header">
+    <div class="logo"><i class="fas fa-certificate"></i> CertVault</div>
+    <a href="dashboard.html" class="nav-btn">Back to Home</a>
+  </header>
+
+  <div class="upload-container">
+    <div class="upload-card">
+      <h2>Upload Your Certificate</h2>
+      <p>Select file and fill details below</p>
+
+      <div class="file-area">
+        <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" hidden 
+               onchange="document.getElementById('fileName').textContent = this.files[0] ? this.files[0].name : ''">
+        <button class="btn select-btn" id="selectBtn" onclick="document.getElementById('fileInput').click()">Choose File</button>
+        <div id="fileName" class="file-name"></div>
+      </div>
+
+      <div class="form-fields">
+        <input type="text" id="certName" placeholder="Certificate Name (e.g., Full Stack Development)">
+        <input type="text" id="issuedBy" placeholder="Issued By (e.g., Udemy / Coursera)">
+        <input type="date" id="issueDate">
+        <button class="btn upload-now-btn" onclick="handleUpload()">Upload Now</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">© 2026 CertVault</footer>
+
+  <script src="script.js"></script>
+  
+  <!-- Extra safety script -->
+  <script>
+    // Direct ga file name display kosam
+    document.addEventListener('DOMContentLoaded', function() {
+      const fileInput = document.getElementById('fileInput');
+      const fileName = document.getElementById('fileName');
+      
+      if (fileInput && fileName) {
+        // Old event remove chesi new add
+        fileInput.onchange = function() {
+          if (fileInput.files.length > 0) {
+            fileName.textContent = fileInput.files[0].name;
+          }
+        };
+      }
+    });
+  </script>
+</body>
+</html>
