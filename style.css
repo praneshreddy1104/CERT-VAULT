@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+.particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particles span {
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  animation: float 30s infinite linear;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+@keyframes float {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(80px, -120px); }
+  100% { transform: translate(0,0); }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo i {
+  color: #ffd700;
+}
+
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+.nav-btn:hover {
+  color: #ffd700;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.4);
+  text-align: center;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px 20px 100px;
+}
+
+.login-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 30px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  font-size: 16px;
+}
+
+.login-card input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link span {
+  color: #ffd700;
+  cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard-container {
+  padding: 120px 20px 100px;
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.upload-section, .certs-section {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 700px;
+}
+
+.upload-btn {
+  font-size: 1.2rem;
+  padding: 16px 40px;
+}
+
+/* Upload Page */
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 20px 120px;
+}
+
+.upload-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.form-fields input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+}
+
+.file-area {
+  margin: 30px 0;
+}
+
+.select-btn {
+  padding: 12px 30px;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0, #00f260);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+.particles span { background: rgba(255,255,255,0.6); box-shadow: 0 0 20px rgba(255,255,255,0.8); }
+
+.header { background: rgba(30, 0, 70, 0.6); backdrop-filter: blur(12px); }
+
+.btn {
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  color: #000;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,242,96,0.4);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,242,96,0.6);
+}
+
+.select-btn, .upload-btn, .view-btn {
+  padding: 14px 40px;
+  font-size: 1.1rem;
+}
+
+.view-btn {
+  background: linear-gradient(90deg, #ff6b6b, #f94d6a);
+  margin: 40px auto;
+  display: block;
+  width: 250px;
+}
+
+.form-fields input {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.form-fields input::placeholder { color: rgba(255,255,255,0.7); }
+
+.upload-section, .certs-section {
+  background: rgba(20, 0, 50, 0.5);
+  border: 1px solid rgba(0,242,96,0.3);
+  backdrop-filter: blur(10px);
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #ff00cc, #3333ff, #00ff99);
+  background-size: 300% 300%;
+  animation: gradientBG 12s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+.particles span { background: rgba(255,255,255,0.7); box-shadow: 0 0 25px rgba(255,255,255,0.9); animation: float 20s infinite linear; }
+
+.header { background: rgba(20, 0, 80, 0.7); backdrop-filter: blur(15px); }
+
+.btn {
+  background: linear-gradient(90deg, #00ff99, #00ccff);
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(0,255,153,0.5);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0,255,153,0.7);
+}
+
+.big-upload-btn {
+  font-size: 1.4rem;
+  padding: 20px 60px;
+  margin: 20px auto;
+  display: block;
+  background: linear-gradient(90deg, #ff00cc, #ff3366);
+  color: white;
+  box-shadow: 0 10px 30px rgba(255,0,204,0.5);
+}
+
+.view-btn {
+  background: linear-gradient(90deg, #ffff00, #ff9900);
+  color: black;
+  margin: 40px auto;
+  display: block;
+  width: 280px;
+}
+
+.form-fields input {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(0,255,153,0.4);
+  color: white;
+}
+
+.file-name { margin-top: 10px; color: #00ff99; font-weight: 500; }
+.cert-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.cert-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+}
+
+.cert-card p {
+  margin: 0.3rem 0;
+  color: #666;
+}
+
+.cert-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+
+.btn-small.delete {
+  background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+}
+
+.btn-small:hover {
+  opacity: 0.9;
+}
+.btn.select-btn {
+  cursor: pointer;
+  pointer-events: auto; /* idi undali */
+  z-index: 10;
+}
